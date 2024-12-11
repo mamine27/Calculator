@@ -86,3 +86,16 @@ body {
     color: aqua;
     
 }
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom p {
+    
+    color: white;
+}
+.bottom a{
+    text-decoration: none;
+    color: aquamarine;
+}
