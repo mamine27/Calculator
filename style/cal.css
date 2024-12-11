@@ -3,21 +3,20 @@ body {
     background-color: black;
     width: 100%;
     display: flex;
-    background: linear-gradient(to right, rgb(41, 40, 39), rgb(48, 59, 124));
-
-
-}
-.Page{
-    background: linear-gradient(to right, rgb(163, 159, 155), rgb(48, 59, 124));
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    background: linear-gradient(to right, rgb(211 194 178), rgb(115 255 233 / 61%));    flex-direction: column;    
     height: 100vh;
-    
 }
 .Top{
     flex: 0.2;
-
+    display: flex;
+    justify-content: flex-end;
+}
+.Top a{
+    margin: 20px;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .mid {
     flex: 1;
@@ -98,9 +97,9 @@ body {
 }
 .bottom p {
     
-    color: white;
+    color: rgb(8, 8, 8);
 }
 .bottom a{
     text-decoration: none;
-    color: aquamarine;
+    color: rgb(59, 99, 136);
 }
