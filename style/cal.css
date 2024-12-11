@@ -1,7 +1,10 @@
+
 body {
     background-color: black;
     width: 100%;
     display: flex;
+    font-family: 'Roboto', sans-serif; /* Apply the font to the body */
+
 }
 .Page{
     background-color: black;
@@ -22,7 +25,7 @@ body {
     align-items: center;
 }
 .window{
-    width: 50%;
+    width: 30%;
     height: 90%;
     border-radius: 10px;
     background-color: aliceblue;
@@ -34,9 +37,18 @@ body {
     border-radius: 10px;
     flex:0.3;
     background-color: rgb(54, 135, 146);
-
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
+.output{
+    padding-right: 10px;
+    font-size: xx-large;
+    color: black;
+
+    
+}
 
 .buttons{
     flex: 1;
