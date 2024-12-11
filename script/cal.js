@@ -1,36 +1,33 @@
 let screened = document.getElementsByClassName('output')[0]
-console.log(screened)
 let buttons = document.querySelectorAll('button')
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
+        let cur = screened.innerHTML.length - 1
         if (button.innerHTML == '='){
             let nw = screened.innerHTML.split(' ')
             let first = Number(nw[0])
             let second = Number(nw[2])
             let op = nw[1]
-            
             screened.innerHTML = calculator(first , second , op)
         }
         else if(button.innerHTML == 'C'){
             screened.innerHTML = ''
         }
-
+        else if(button.innerHTML == '-' && (screened.innerHTML[cur] == ' ' || screened.innerHTML == '')){
+            screened.innerHTML += button.textContent
+        }
         else if (button.innerText == '+' || button.innerText == '-' || button.innerText == '/' || button.innerText == 'x'){
             screened.innerHTML += ' ' + button.textContent + ' '
         }
-        
         else{
-
             screened.innerHTML += button.textContent
-
         }
 
     
 
     });
 });
-console.log(buttons)
 function calculator(a,b,op){
     function operator(a,b , op){
         if (op == '-'){
@@ -47,9 +44,9 @@ function calculator(a,b,op){
         else if (op == '/'){
             return div(a,b)
         }
-        else{
-            return false
-        }
+        
+        return "ERROR!"
+        
     }
 
     function add(a,b){
