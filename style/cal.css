@@ -81,7 +81,9 @@ body {
     text-align: justify;
 }
 
-}
+
+#clear {
+    background-color: rgb(175, 43, 43);}
 .buttons button {
     padding: 20px;
     font-size: 18px;

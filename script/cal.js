@@ -19,7 +19,7 @@ buttons.forEach(button => {
             // the operator is the second element in the array which is a string
 
             let nw = screened.innerHTML.split(' ')
-            let first = Number(nw[0])
+            let first = Number(nw[0])   
             let second = Number(nw[2])
             let op = nw[1]
 
@@ -55,7 +55,7 @@ function calculator(a,b,op){
     // the operator function will take 3 parameters
     // a and b are the numbers to be calculated
     // op is the operator to be used
-
+    
     function operator(a,b , op){
         if (op == '-'){
             return dif(a,b)
@@ -69,6 +69,9 @@ function calculator(a,b,op){
             
         }
         else if (op == '/'){
+            if  (div(a,b) == false){
+                return "ERROR!"
+            }
             return div(a,b)
         }
         // if the operator is not valid, the function will return an error
