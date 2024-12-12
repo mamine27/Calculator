@@ -9,12 +9,16 @@ buttons.forEach(button => {
     button.addEventListener('click', () => {
         // based on the button clicked, the following will happen
         let cur = screened.innerHTML.length - 1 
-        if (screened.innerHTML == '0'){
-            screened.innerHTML = ''
-        }
-
+        
         // if the user clicked the equal button, the calculator function will be called
         if (button.innerHTML == '='){
+             // split the string in the screen to get the numbers and the operator
+            // first number is the first element in the array which is anumber 
+            // second number is the third element in the array which is a number
+            // the operator is the second element in the array which is a string
+
+            let nw = screened.innerHTML.split(' ')
+            
             // the answer for the calculation will be displayed in the screen
             screened.innerHTML = manager(nw)
         }
@@ -27,7 +31,7 @@ buttons.forEach(button => {
             screened.innerHTML += button.textContent
         }
         // if the button clicked is an operator add it to the screen with spaces
-        else if (button.innerText == '+' || button.innerText == '-' || button.innerText == '/' || button.innerText == 'x'){
+        else if (screened.innerHTML != '0' && button.innerText == '+' || button.innerText == '-' || button.innerText == '/' || button.innerText == 'x'){
             screened.innerHTML += ' ' + button.textContent + ' '
         }
         // if the button clicked is a number add it to the screen
