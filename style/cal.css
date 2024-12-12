@@ -48,6 +48,8 @@ body {
     justify-content: flex-end;
     align-items: center;
     margin: 3px;
+    border-color: #3f1b1b;
+    border-width: 40px;
 }
 
 .output{

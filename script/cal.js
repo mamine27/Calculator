@@ -20,7 +20,7 @@ buttons.forEach(button => {
             let nw = screened.innerHTML.split(' ')
             
             // the answer for the calculation will be displayed in the screen
-            screened.innerHTML = manager(nw)
+            screened.innerHTML = bodmas(nw)
         }
         // if the user wanted to clear the screen it will
         else if(button.innerHTML == 'C'){
@@ -44,6 +44,26 @@ buttons.forEach(button => {
     });
 });
 
+
+function bodmas(source){
+    console.log(source)
+    let n = source.length
+    let arr = [source[0]]
+
+    
+    for(let i = 1 ; i < n ; i+=2){
+        if (source[i] == '+' || source[i] == '-'){
+            arr.push(source[i])
+            arr.push(source[i+1])
+        }
+        else{
+            let left = Number(arr.pop())
+            arr.push(calculator(left,Number(source[i+1]),source[i]))
+        }
+    }
+
+    return manager(arr)
+}
 function manager(source){
 
     let a = Number(source[0])
