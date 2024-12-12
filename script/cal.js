@@ -8,23 +8,15 @@ buttons.forEach(button => {
 
     button.addEventListener('click', () => {
         // based on the button clicked, the following will happen
-        let cur = screened.innerHTML.length - 1
+        let cur = screened.innerHTML.length - 1 
+        if (screened.innerHTML == '0'){
+            screened.innerHTML = ''
+        }
 
         // if the user clicked the equal button, the calculator function will be called
         if (button.innerHTML == '='){
-
-            // split the string in the screen to get the numbers and the operator
-            // first number is the first element in the array which is anumber 
-            // second number is the third element in the array which is a number
-            // the operator is the second element in the array which is a string
-
-            let nw = screened.innerHTML.split(' ')
-            let first = Number(nw[0])   
-            let second = Number(nw[2])
-            let op = nw[1]
-
             // the answer for the calculation will be displayed in the screen
-            screened.innerHTML = calculator(first , second , op)
+            screened.innerHTML = manager(nw)
         }
         // if the user wanted to clear the screen it will
         else if(button.innerHTML == 'C'){
@@ -48,7 +40,24 @@ buttons.forEach(button => {
     });
 });
 
+function manager(source){
 
+    let a = Number(source[0])
+    let n = source.length
+
+    for(let i = 1 ; i < n ; i += 2){
+        
+        let cur = calculator(a,Number(source[i+1]),source[i])
+        if (cur == 'ERROR!' || cur == NaN || cur == undefined){
+            return 'ERROR!'
+        }
+        console.log(a)
+        a = cur
+    }
+
+    return a
+
+}
 
 
 function calculator(a,b,op){
