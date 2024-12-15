@@ -58,7 +58,11 @@ function bodmas(source){
         }
         else{
             let left = Number(arr.pop())
-            arr.push(calculator(left,Number(source[i+1]),source[i]))
+            let outcome = calculator(left,Number(source[i+1]),source[i])
+            if (outcome == "ERROR!"){
+                return "ERROR!"
+            }
+            arr.push(outcome)
         }
     }
 
