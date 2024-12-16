@@ -37,5 +37,3 @@ A web-based calculator that performs basic arithmetic operations and supports mu
 This project is inspired by and built using knowledge from [The Odin Project](https://www.theodinproject.com/).  
 
 ---  
-
-You can now add this updated version to your `README.md`. Let me know if there's anything else you'd like to change! 😊
