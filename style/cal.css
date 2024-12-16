@@ -1,4 +1,11 @@
-
+@font-face {
+    font-family: 'Gagalin';
+    src: url('../fonts/Gagalin-Regular.otf') format('woff2'),
+         url('../fonts/Gagalin-Regular.otf') format('woff'),
+         url('../fonts/Gagalin-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 body {
     background-color: black;
     width: 100%;
@@ -10,14 +17,14 @@ body {
 .Top{
     flex: 0.2;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 .Top a{
     margin: 20px;
     text-decoration: none;
     padding: 10px;
-    color: black;
-    font-family:'Courier New', Courier, monospace;
+    color: rgba(0, 0, 0, 0.733);
+    font-family: 'Gagalin', sans-serif;
 }
 
 
@@ -47,7 +54,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin: 3px;
+    margin: 15px;
     border-color: #3f1b1b;
     border-width: 40px;
 }
@@ -56,8 +63,7 @@ body {
     padding-right: 10px;
     font-size: xx-large;
     color: black;
-
-    
+    margin: initial;    
 }
 
 .buttons{

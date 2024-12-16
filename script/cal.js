@@ -9,7 +9,9 @@ buttons.forEach(button => {
     button.addEventListener('click', () => {
         // based on the button clicked, the following will happen
         let cur = screened.innerHTML.length - 1 
-        
+        if (screened.innerHTML == '0' || screened.innerHTML == 'ERROR!'){
+            screened.innerHTML = ''
+        }
         // if the user clicked the equal button, the calculator function will be called
         if (button.innerHTML == '='){
              // split the string in the screen to get the numbers and the operator
