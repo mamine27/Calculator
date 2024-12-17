@@ -37,8 +37,7 @@ body {
     align-items: center;
 }
 .window{
-    width: 30%;
-    height: 90%;
+    height: 450px;
     border-radius: 10px;
     background-color: aliceblue;
     display: flex;
